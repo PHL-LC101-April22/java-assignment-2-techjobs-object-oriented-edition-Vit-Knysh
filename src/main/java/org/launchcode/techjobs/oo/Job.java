@@ -96,4 +96,25 @@ public class Job {
     public void setCoreCompetency(CoreCompetency coreCompetency) {
         this.coreCompetency = coreCompetency;
     }
+
+//    to String Method
+
+    @Override
+    public String toString() {
+        String emptyField = "Data not available";
+        if(name == "") {
+            name = emptyField;
+        }
+        if(employer.getValue() == "") {
+            employer.setValue(emptyField);
+        }
+        if(positionType.getValue() == "") {
+            positionType.setValue(emptyField);
+        }
+        if(coreCompetency.getValue() == "") {
+            coreCompetency.setValue(emptyField);
+        }
+
+        return String.format("\nID: %x\nName: %s\nEmployer: %s\nPosition Type: %s\nCore Competency: %s\n", this.getId(), this.getName(), this.getEmployer(), this.getPositionType(), this.getCoreCompetency());
+    }
 }
