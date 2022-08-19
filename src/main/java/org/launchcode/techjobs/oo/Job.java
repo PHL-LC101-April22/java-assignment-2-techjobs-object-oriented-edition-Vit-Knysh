@@ -102,6 +102,10 @@ public class Job {
     @Override
     public String toString() {
         String emptyField = "Data not available";
+        String doesNotExist = "OOPS! This job does not seem to exist.";
+        if(name == "" && employer.getValue() == "" && location.getValue() == "" && positionType.getValue() == "" && coreCompetency.getValue() == "") {
+            return doesNotExist;
+        }
         if(name == "") {
             name = emptyField;
         }
