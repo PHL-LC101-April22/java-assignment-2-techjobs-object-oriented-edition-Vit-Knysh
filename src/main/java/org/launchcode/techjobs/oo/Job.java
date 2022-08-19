@@ -108,6 +108,9 @@ public class Job {
         if(employer.getValue() == "") {
             employer.setValue(emptyField);
         }
+        if(location.getValue() == "") {
+            location.setValue(emptyField);
+        }
         if(positionType.getValue() == "") {
             positionType.setValue(emptyField);
         }
@@ -115,6 +118,6 @@ public class Job {
             coreCompetency.setValue(emptyField);
         }
 
-        return String.format("\nID: %x\nName: %s\nEmployer: %s\nPosition Type: %s\nCore Competency: %s\n", this.getId(), this.getName(), this.getEmployer(), this.getPositionType(), this.getCoreCompetency());
+        return String.format("\nID: %x\nName: %s\nEmployer: %s\nLocation: %s\nPosition Type: %s\nCore Competency: %s\n", this.getId(), this.getName(), this.getEmployer(), this.getLocation(), this.getPositionType(), this.getCoreCompetency());
     }
 }
