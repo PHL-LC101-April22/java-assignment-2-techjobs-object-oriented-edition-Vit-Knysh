@@ -33,8 +33,13 @@ public class JobTest {
         assertEquals(testJob.getLocation().toString(), "Desert");
         assertEquals(testJob.getPositionType().toString(), "Quality control");
         assertEquals(testJob.getCoreCompetency().toString(), "Persistence");
+    }
 
-
+    @Test
+    public void testJobsForEquality(){
+        Job testJob1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        Job testJob2 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        assertFalse(testJob1.getId() == testJob2.getId());
     }
 
 }
