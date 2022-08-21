@@ -16,6 +16,8 @@ public class Main {
         jobs.add(job3);
         jobs.add(job4);
 
+//        System.out.println(job1.toString());
+
 
         for (Job job : jobs){
             System.out.println(job);

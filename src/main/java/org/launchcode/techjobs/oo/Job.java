@@ -106,19 +106,19 @@ public class Job {
         if((name == "" || name == null) && (employer.getValue() == "" ||employer.getValue() == null) && (location.getValue() == "" || location.getValue() == null) && (positionType.getValue() == "" || positionType.getValue() == null) && (coreCompetency.getValue() == "" || coreCompetency.getValue() == null)) {
             return doesNotExist;
         }
-        if(name == "") {
+        if(name == "" || name == null) {
             name = emptyField;
         }
-        if(employer.getValue() == "") {
+        if(employer.getValue() == "" || employer.getValue() == null) {
             employer.setValue(emptyField);
         }
-        if(location.getValue() == "") {
+        if(location.getValue() == "" || location.getValue() == null) {
             location.setValue(emptyField);
         }
-        if(positionType.getValue() == "") {
+        if(positionType.getValue() == "" || positionType.getValue() == null) {
             positionType.setValue(emptyField);
         }
-        if(coreCompetency.getValue() == "") {
+        if(coreCompetency.getValue() == "" || coreCompetency.getValue() == null) {
             coreCompetency.setValue(emptyField);
         }
 
