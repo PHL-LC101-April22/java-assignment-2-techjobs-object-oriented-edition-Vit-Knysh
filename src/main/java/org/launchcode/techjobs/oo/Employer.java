@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Employer extends JobField{
 
-    public Employer (String aValue) {
+    public Employer(String aValue) {
         super(aValue);
     }
 //    private int id;
